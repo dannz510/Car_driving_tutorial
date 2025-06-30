@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sky">
+        <div class="clouds-vector"></div>
+        <div class="sun-moon-obj-vector">
+            <div id="sun-obj" class="sun-obj"></div>
+            <div id="moon-obj" class="moon-obj">
+                <div id="moon-phase" class="moon-phase"></div>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="distance-wrapper">
+                <h2 id="distance" class="distance">
+                    <span id="distance-text">Distance :
+                        <span id="distance-km">0</span>
+                        <span id="distance-text-km">KM</span>
+                        <span id="distance-meters">0</span>
+                        <span id="distance-text-meters">Meters</span>
+                    </span>
+                </h2>
+                <div class="distance-btns-container">
+                    <button id="distance-btn-icon" class="btn-icon distance-btn-icon">
+                        <i class="fa-duotone fa-solid fa-2xl fa-car"></i>
+                        <button id="distance-btn" class="btn distance-btn">
+                            KM And Meters
+                        </button>
+                    </button>
+                </div>
+            </div>
+            <div class="speed-wrapper">
+                <h2 id="speed" class="speed">
+                    <span id="speed-text">Speed :
+                        <span id="speed-km-h">0</span>
+                        <span id="speed-text-km-h">KM/H</span>
+                    </span>
+                </h2>
+                <div class="speed-btns-container">
+                    <button id="speed-btn-icon" class="btn-icon speed-btn-icon">
+                        <i class="fa-sharp fa-solid fa-2xl fa-gauge-high"></i>
+                        <button id="speed-btn" class="btn speed-btn">
+                            M/H
+                        </button>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="points-container">
+            <h2 class="points-text">Points :</h2>
+            <h1 id = "points-div" class="points-div">0</h1>
+            <div class="opposite-car-points-appear-vector"></div>
+            <div class="line-car-points-appear-vector"></div>
+        </div>
+
+        <button id="btn-menu-settings" class="btn btn-menu-settings btn-menu-settings-animated">
+            </button>
+
+        <div id="restart" class="restart menu-setting-all">
+            Restart
+        </div>
+
+    </div>
+
+    <div class="ground">
+        <div class="road-vector">
+            <div class="road"></div>
+            <div class="road-line-wrapper"></div>
+        </div>
+
+        <div class="mountains-vector">
+            <div class="mountains-range-left"></div>
+            <div class="mountains-range-right"></div>
+        </div>
+        </div>
+
+    <div class="car-interior"></div>
+
+    <div class="car-box">
+        <div class="car-interiour-front-top"></div>
+        <div class="car-speedometer-container">
+            <div class="rev-counter">
+                <div class="rev-counter-center">
+                    <div class="arrow-center rev-counter-arrow-center">
+                        <div class="rev-counter-arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="speedometer">
+                <div class="speedometer-center">
+                    <div class="arrow-center speedometer-arrow-center">
+                        <div class="speedometer-arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fuel-gauge">
+                <div class="fuel-gauge-center">
+                    <div class="arrow-center fuel-arrow-center">
+                        <div class="fuel-gauge-arrow"></div>
+                    </div>
+                    <i class="fa-solid fa-2xs fa-gas-pump"></i>
+                </div>
+            </div>
+        </div>
+        <div class="steering-wheel"></div>
+
+        <div class="vents-audio-monitor-container-background"></div>
+        <div class="vents-audio-monitor-container">
+            <div class="vents-and-monitor-container">
+                <div class="vents"></div>
+                <div class="monitor">
+                    <i class="fa-solid fa-square-phone"></i>
+                    <i class="fa-solid fa-music"></i>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-podcast"></i>
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+            </div>
+            <div class="audio-container"></div>
+        </div>
+
+        <div class="glove-box-rightVents-container">
+            <div class="rightVents-container"></div>
+            <div class="glove-box-top-space"></div>
+            <div class="glove-box-container">
+                <div class="glove-box-handle"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="car-hood-wrapper">
+        <div id="car-hood" class="car-hood">
+            <div id="car-hood-damaged" class="car-hood-damaged"></div>
+        </div>
+    </div>
+
+    <div class="side-mirror-container side-mirror-container-left">
+        <div class="side-mirror side-mirror-left">
+            <div class="side-mirror-upper-side side-mirror-left-upper-side"></div>
+            <div class="side-mirror-down-side side-mirror-left-down-side"></div>
+        </div>
+    </div>
+    <div class="car-box-left-side-inside"></div>
+
+    <div class="side-mirror-container side-mirror-container-right">
+        <div class="side-mirror side-mirror-right">
+            <div class="side-mirror-upper-side side-mirror-right-upper-side"></div>
+            <div class="side-mirror-down-side side-mirror-right-down-side"></div>
+        </div>
+    </div>
+
+    <div class="car-box-left-side-inside"></div>
+    <div class="car-box-right-side-inside"></div>
+    <div class="car-box-top"></div>
+
+    <div id="menu" class="menu">
+
+        <div id="menu-list" class="menu-list">
+
+            <div id="restart-menu" class="restart-menu menu-setting-all">
+                Restart
+            </div>
+
+            <div id="start" class="start menu-setting-all">
+                Start
+            </div>
+
+            <div id="change-steering-wheel" class="menu-setting-all">
+                Change Steering Wheel
+                <div id="steering-wheels-parent-container" class="steering-wheels-parent-container">
+                    <div id="steering-wheels-list-container" class="steering-wheels-list-container">
+                    </div>
+                    <button class="close-btn">
+                        <div class="close-sign"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="change-car-color" class="menu-setting-all">
+                Change Car Color
+                <div id="color-parent-container" class="color-parent-container">
+                    <button class="close-btn">
+                        <div class="close-sign"></div>
+                    </button>
+                    <div id="car-color-list-container" class="car-color-list-container">
+                    </div>
+                </div>
+            </div>
+
+            <div id="change-place" class="menu-setting-all">
+                Change Place
+                <div id="place-parent-container" class="place-parent-container">
+                    <div id="place-list-container" class="place-list-container">
+                    </div>
+                    <button class="close-btn">
+                        <div class="close-sign"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="author" class="author menu-setting-all">
+                Author
+                <div id="author-info-parent-container" class="author-info-parent-container">
+                    <div id="author-info" class="author-info">
+                        <button class="close-btn">
+                            <div class="close-sign"></div>
+                        </button>
+                        <h2>Dannz</h2>
+                        <p>Front end developer,</p>
+                        <p>
+                        <p>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/500px-Flag_of_Vietnam.svg.png"
+                                alt="Flag of Việt Nam">
+                        <h5>2025</h5>
+                        <p>THANKS &</p>
+                        <p>ENJOY!</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="resolution-warning">
+        to play min screen size must equals - 670px
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
