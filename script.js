@@ -1442,7 +1442,7 @@ start.addEventListener("click", () => {
   let pointsOppositeCar = 0
   let pointsLineCar = 0
 
-  function pointsOnOppositeCar() {
+  function pointpostOptioant() {
     pointsOppositeCar = 150 + (speedInKms * 2)
     oppositeCarPointsAppearVector.innerText = "+ " + pointsOppositeCar
 
